@@ -1103,6 +1103,7 @@ const UI = {
                               'error');
             } else {
                 UI.showStatus(_("Failed to connect to server"), 'error');
+                window.close();
             }
         } else if (UI.getSetting('reconnect', false) === true && !UI.inhibit_reconnect) {
             UI.updateVisualState('reconnecting');

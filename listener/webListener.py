@@ -25,7 +25,7 @@ class webListener:
             'status': attrs['status']
         }
         self.ws.send(json.dumps(data))
-        if self.dictPath:
+        if len(self.dictPath) > 1:
             self.dictPath.pop()
             self.dictPath[-1] = str(int(self.dictPath[-1]) + 1)
 
